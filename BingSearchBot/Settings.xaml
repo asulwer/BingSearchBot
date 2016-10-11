@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="BingSearchBot.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BingSearchBot"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <TextBlock Text="UserName" />
+            <TextBox Text="{Binding Path=UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Password" />
+            <TextBox Text="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Mode" />
+            <ComboBox Name="cbMode" SelectedItem="{Binding Path=Mode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Min" />
+            <TextBox Text="{Binding Path=Min, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Max" />
+            <TextBox Text="{Binding Path=Max, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Count" />
+            <TextBox Text="{Binding Path=Count, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="FilePath" />
+            <TextBlock Text="{Binding Path=FilePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Button Content="Words Location" Click="btnWords_Click" />
+        </StackPanel>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Label="Save" Icon="Save" Click="abbSave_Click" />
+            <AppBarButton Label="Cancel" Icon="Cancel" Click="abbCancel_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
